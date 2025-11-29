@@ -4,14 +4,6 @@ FROM quay.io/keycloak/keycloak:26.0
 # Copiar tema personalizado
 COPY themes/redeautofacil /opt/keycloak/themes/redeautofacil
 
-# Configurações de build
-ENV KC_HEALTH_ENABLED=true
-ENV KC_METRICS_ENABLED=true
-ENV KC_DB=postgres
-
-# Build otimizado
-RUN /opt/keycloak/bin/kc.sh build
-
-# Entrypoint
+# Entrypoint - usar start sem --optimized para aceitar variáveis em runtime
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start", "--optimized"]
+CMD ["start", "--http-enabled=true", "--health-enabled=true", "--metrics-enabled=true"]
