@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Keycloak data
+data/
+h2/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

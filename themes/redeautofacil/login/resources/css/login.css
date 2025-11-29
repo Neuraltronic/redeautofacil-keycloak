@@ -1,0 +1,368 @@
+/* ============================================
+   Tema Rede Auto Fácil - Keycloak Login
+   Cores: Preto, Vermelho, Branco, Cinza
+   ============================================ */
+
+/* Importar fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+  --color-primary-900: #171717;
+  --color-primary-800: #262626;
+  --color-primary-700: #404040;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --border-radius: 0.75rem;
+  --border-radius-lg: 1rem;
+  --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  --shadow-large: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-800) 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal do login */
+.login-pf {
+  background: transparent !important;
+}
+
+.login-pf body {
+  background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-800) 100%) !important;
+}
+
+/* Card de login */
+#kc-login {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-large);
+  padding: 2.5rem;
+  max-width: 420px;
+  margin: 2rem auto;
+}
+
+.card-pf {
+  background: var(--color-white) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-large) !important;
+  border: none !important;
+  padding: 2rem !important;
+}
+
+/* Header com logo */
+#kc-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#kc-header-wrapper {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Logo */
+.kc-logo-text {
+  display: none;
+}
+
+#kc-logo {
+  background-image: url('../img/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* Títulos */
+#kc-page-title,
+.login-pf-page-header h1 {
+  color: var(--color-primary-900) !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  text-align: center;
+  margin-bottom: 1.5rem !important;
+}
+
+#kc-form-login h1,
+#kc-form h1 {
+  color: var(--color-primary-900);
+  font-weight: 700;
+}
+
+/* Labels */
+.control-label,
+label {
+  color: var(--color-neutral-500) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Inputs */
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background: var(--color-neutral-50) !important;
+  border: 2px solid var(--color-neutral-200) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 0.875rem 1rem !important;
+  font-size: 1rem !important;
+  color: var(--color-primary-900) !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+}
+
+.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none !important;
+  border-color: var(--color-red-500) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+  background: var(--color-white) !important;
+}
+
+.form-control::placeholder {
+  color: var(--color-neutral-400) !important;
+}
+
+/* Botão principal (Login) */
+.btn-primary,
+#kc-login,
+input[type="submit"] {
+  background: var(--color-red-500) !important;
+  border: none !important;
+  border-radius: var(--border-radius) !important;
+  color: var(--color-white) !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  padding: 0.875rem 1.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+  text-transform: none !important;
+}
+
+.btn-primary:hover,
+#kc-login:hover,
+input[type="submit"]:hover {
+  background: var(--color-red-600) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+.btn-primary:active,
+input[type="submit"]:active {
+  transform: translateY(0) !important;
+}
+
+/* Botões secundários */
+.btn-default,
+.btn-secondary {
+  background: transparent !important;
+  border: 2px solid var(--color-neutral-200) !important;
+  border-radius: var(--border-radius) !important;
+  color: var(--color-neutral-500) !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-default:hover,
+.btn-secondary:hover {
+  background: var(--color-neutral-50) !important;
+  border-color: var(--color-neutral-300) !important;
+  color: var(--color-primary-900) !important;
+}
+
+/* Links */
+a {
+  color: var(--color-red-500) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover {
+  color: var(--color-red-600) !important;
+  text-decoration: underline !important;
+}
+
+#kc-registration a,
+#kc-info a {
+  color: var(--color-red-500) !important;
+  font-weight: 500 !important;
+}
+
+/* Checkbox "Lembrar-me" */
+.checkbox label,
+#kc-form-options label {
+  color: var(--color-neutral-500) !important;
+  font-size: 0.875rem !important;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-red-500) !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Mensagens de erro */
+.alert-error,
+.kc-feedback-text,
+.alert-warning {
+  background: #fef2f2 !important;
+  border: 1px solid #fecaca !important;
+  border-radius: var(--border-radius) !important;
+  color: var(--color-red-700) !important;
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.alert-success {
+  background: #f0fdf4 !important;
+  border: 1px solid #bbf7d0 !important;
+  border-radius: var(--border-radius) !important;
+  color: #166534 !important;
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Separador "ou" */
+#kc-social-providers {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+#kc-social-providers h4 {
+  color: var(--color-neutral-400) !important;
+  font-size: 0.875rem !important;
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Botões de login social */
+.social-button,
+.kc-social-item {
+  background: var(--color-white) !important;
+  border: 2px solid var(--color-neutral-200) !important;
+  border-radius: var(--border-radius) !important;
+  color: var(--color-primary-900) !important;
+  padding: 0.75rem 1rem !important;
+  margin-bottom: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.social-button:hover,
+.kc-social-item:hover {
+  background: var(--color-neutral-50) !important;
+  border-color: var(--color-neutral-300) !important;
+}
+
+/* Footer */
+#kc-info,
+#kc-registration {
+  text-align: center !important;
+  margin-top: 1.5rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid var(--color-neutral-200) !important;
+}
+
+#kc-info-wrapper {
+  color: var(--color-neutral-500) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Texto de ajuda */
+.instruction,
+#kc-form-options .checkbox {
+  color: var(--color-neutral-500) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Área de form options (lembrar-me, esqueci senha) */
+#kc-form-options {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Esconder elementos desnecessários */
+.login-pf-settings,
+.kc-locale {
+  display: none !important;
+}
+
+/* Container do formulário */
+#kc-form {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 1.25rem !important;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .card-pf {
+    margin: 1rem !important;
+    padding: 1.5rem !important;
+  }
+
+  #kc-header {
+    padding: 1.5rem 0 !important;
+  }
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-pf {
+  animation: fadeInUp 0.4s ease-out !important;
+}
+
+/* Melhorias de acessibilidade */
+.btn:focus,
+.form-control:focus,
+a:focus {
+  outline: 2px solid var(--color-red-500) !important;
+  outline-offset: 2px !important;
+}
+
+/* Spinner de loading */
+.spinner {
+  border-color: var(--color-red-500) !important;
+}
