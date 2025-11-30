@@ -1,6 +1,15 @@
+<div align="center">
+
 # Keycloak - Rede Auto Fácil
 
 Servidor de autenticação Keycloak com tema personalizado para a Rede Auto Fácil.
+
+[![Keycloak](https://img.shields.io/badge/Keycloak-26-4D4D4D?style=for-the-badge&logo=keycloak&logoColor=white)](https://www.keycloak.org/)
+[![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Railway](https://img.shields.io/badge/Railway-Deploy-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
+
+</div>
 
 ## Deploy no Railway
 
